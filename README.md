@@ -1,16 +1,25 @@
-## Hi there 👋
+# 👋 Hi, I'm Shivang
 
-<!--
-**Shivang731/Shivang731** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+🚀 Aspiring Python Developer | AI/ML Enthusiast  
+🎯 Focused on building smart, real-world projects with Python and Machine Learning  
+🧠 Fast learner with a passion for automation, AI, and solving real problems
 
-Here are some ideas to get you started:
+---
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## 🛠️ Projects
+
+- 🤖 **Resume Matcher (NLP)**  
+Compares resumes and job descriptions using TF-IDF and cosine similarity  
+🔗 [View Project](https://github.com/YOUR_USERNAME/resume-matcher)
+
+- 💬 **Sentiment Analyzer** *(Coming Soon)*  
+Analyzes sentiment of user-input text (Positive/Negative/Neutral)
+
+- 📈 **AI Study Progress Tracker** *(Coming Soon)*  
+Predicts when study goals will be met using Linear Regression
+
+---
+
+## 📚 Currently Learning
+- Python for AI/ML
+- scikit-learn, pandas, matplo
