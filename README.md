@@ -7,9 +7,9 @@
 ---
 
 ## 🚀 Tech Stack
-- 💻 Languages: Python, HTML, CSS, JavaScript (learning)
-- ⚙️ Tools: Git, GitHub, VS Code, ChatGPT
-- 🌱 Currently learning: Frontend Development, AI Basics
+- 💻 Languages: Python,  JavaScript (learning)
+- ⚙️ Tools: Git, GitHub, VS Code
+- 🌱 Currently learning: Machine Learning ,JavaScript
 
 ---
 
