@@ -1,25 +1,29 @@
-# 👋 Hi, I'm Shivang
+# 👋 Hi, I'm Shivang Kumar Dubey
 
-🚀 Aspiring Python Developer | AI/ML Enthusiast  
-🎯 Focused on building smart, real-world projects with Python and Machine Learning  
-🧠 Fast learner with a passion for automation, AI, and solving real problems
-
----
-
-## 🛠️ Projects
-
-- 🤖 **Resume Matcher (NLP)**  
-Compares resumes and job descriptions using TF-IDF and cosine similarity  
-🔗 [View Project](https://github.com/YOUR_USERNAME/resume-matcher)
-
-- 💬 **Sentiment Analyzer** *(Coming Soon)*  
-Analyzes sentiment of user-input text (Positive/Negative/Neutral)
-
-- 📈 **AI Study Progress Tracker** *(Coming Soon)*  
-Predicts when study goals will be met using Linear Regression
+🎓 Aspiring Python Developer | Exploring AI/ML and Web Development  
+📫 Reach me at: [shivangdubey731@gmail.com](mailto:shivangdubey731@gmail.com)  
+🌐 Portfolio: (https://shivang731.github.io)
 
 ---
 
-## 📚 Currently Learning
-- Python for AI/ML
-- scikit-learn, pandas, matplo
+## 🚀 Tech Stack
+- 💻 Languages: Python, HTML, CSS, JavaScript (learning)
+- ⚙️ Tools: Git, GitHub, VS Code, ChatGPT
+- 🌱 Currently learning: Frontend Development, AI Basics
+
+---
+
+## 📊 GitHub Stats
+
+![Shivang's GitHub stats](https://github-readme-stats.vercel.app/api?username=shivang731&show_icons=true&theme=radical)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=shivang731&layout=compact&theme=radical)
+
+---
+
+## 📂 Projects 
+- 🧠 AI Flashcards Generator  
+- ⏱️ Study Tracker with Graphs  
+- 🌦️ Weather App with API  
+- 🧾 Resume Parser using Python
+
+Stay tuned!
