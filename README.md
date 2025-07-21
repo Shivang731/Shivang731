@@ -18,7 +18,7 @@
 ## 📂 Projects 
 - 🧠 AI Flashcards Generator  
 - ⏱️ Study Tracker with Graphs  
-- 🌦️ Weather App with API  (https://github.com/Shivang731/weather-app)
+- 🌦️ [ Weather App with API ]  (https://github.com/Shivang731/weather-app)
 - 🧾 Resume Parser using Python
 
 Stay tuned!
