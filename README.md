@@ -1,13 +1,13 @@
 # 👋 Hi, I'm Shivang Kumar Dubey
 
-🎓 Aspiring Python Developer | Exploring AI/ML and Web Development  
+🎓 Exploring AI/ML and Web Development  
 📫 Reach me at: [shivangdubey731@gmail.com](mailto:shivangdubey731@gmail.com)  
 🌐 Portfolio: (https://shivang731.github.io)
 
 ---
 
 ## 🚀 Tech Stack
-- 💻 Languages: Python,  JavaScript (learning)
+- 💻 Languages: Python,  JavaScript (learning) ,Java
 - ⚙️ Tools: Git, GitHub, VS Code
 - 🌱 Currently learning: Machine Learning ,JavaScript
 
@@ -15,9 +15,3 @@
 
 ---
 
-## 📂 Projects 
-  
-- 🌦️ [Weather App with API](https://github.com/Shivang731/weather-app)
-
-
-Stay tuned!
