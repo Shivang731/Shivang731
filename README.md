@@ -1,6 +1,6 @@
 # 👋 Hi, I'm Shivang Kumar Dubey
 
-🎓 Exploring AI/ML and Web Development  
+  
 📫 Reach me at: [shivangdubey731@gmail.com](mailto:shivangdubey731@gmail.com)  
 🌐 Portfolio: (https://shivang731.github.io)
 
