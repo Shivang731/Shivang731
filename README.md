@@ -7,9 +7,9 @@
 ---
 
 ## 🚀 Tech Stack
-- 💻 Languages: Python,  JavaScript (learning) ,Java
+- 💻 Languages:   JavaScript (learning) ,Java
 - ⚙️ Tools: Git, GitHub, VS Code
-- 🌱 Currently learning: Machine Learning ,JavaScript
+- 🌱 Currently learning: Java,JavaScript
 
 
 
