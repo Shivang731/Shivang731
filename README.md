@@ -1,16 +1,16 @@
 <h1 align="center">👋 Hi, I'm Shivang Kumar Dubey</h1>
-<h3 align="center">Aspiring Software Developer | Learning by Building | Tech Enthusiast</h3>
+<h3 align="center"> Learning by Building </h3>
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=3500&pause=1000&color=00C2FF&center=true&vCenter=true&width=520&lines=Learning+Software+Development;Exploring+Rust+%7C+Python+%7C+Web+Dev;Building+Projects+Step+by+Step" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=3500&pause=1000&color=00C2FF&center=true&vCenter=true&width=520&lines=Learning+Software+Development;Exploring+Rust+%7C+%7C+Web+Dev;Building+Projects+Step+by+Step" />
 </p>
 
 ---
 
 ## 👨‍💻 About Me
 
-I'm **Shivang Kumar Dubey**, a passionate learner exploring **software development, clean coding, and modern technologies**.  
-I enjoy building real-world projects and improving my skills through consistent practice.
+I'm **Shivang Kumar Dubey**,  learner exploring **software development**.  
+Building real-world projects and improving my skills through consistent practice.
 
 ---
 
