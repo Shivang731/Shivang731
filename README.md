@@ -9,7 +9,7 @@
 
 ## 👨‍💻 About Me
 
-I'm **Shivang Kumar Dubey**,  learner exploring **software development**.  
+I'm **Shivang Kumar Dubey**,  learner exploring **Web 3**.  
 Building real-world projects and improving my skills through consistent practice.
 
 ---
@@ -39,13 +39,7 @@ Building real-world projects and improving my skills through consistent practice
   <img src="https://streak-stats.demolab.com?user=Shivang731&theme=tokyonight" height="165" />
 </p>
 
----
 
-## 🐍 Contribution Snake
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Shivang731/Shivang731/output/github-contribution-grid-snake.svg" />
-</p>
 
 ---
 
