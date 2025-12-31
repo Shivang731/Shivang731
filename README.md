@@ -16,8 +16,8 @@ Building real-world projects and improving my skills through consistent practice
 
 ## 🧠 What I'm Learning
 
-- 🦀 Rust  
-- 🐍 Python  
+- 
+- 
 - 🌐 Web Development  
 - 🧩 Data Structures & Algorithms  
 - 🔧 Git & GitHub  
