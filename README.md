@@ -37,16 +37,20 @@ and real software systems behave under pressure.
 
 ### Tech Stacks
 
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=java,python,js,rust,linux,git,docker&theme=dark" />
-</p>
+Tech Stack
+<p align="center"> <img src="https://skillicons.dev/icons?i=java,python,js,rust&theme=dark" /> </p>
+
 
 ---
 
+## **Tools & Environment**
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=linux,git,docker&theme=dark" />
+</p>
 
 
-### Connect
 
-- GitHub → https://github.com/Shivang731  
-- LeetCode → https://leetcode.com/u/Shivang_kd/  
-- X → https://x.com/shivang_twt
+### Socials
+
+<p align="center"> <a href="https://github.com/Shivang731" target="_blank"> <img src="https://img.shields.io/badge/GitHub-0d1117?style=for-the-badge&logo=github&logoColor=white" /> </a> <a href="https://leetcode.com/u/Shivang_kd/" target="_blank"> <img src="https://img.shields.io/badge/LeetCode-0d1117?style=for-the-badge&logo=leetcode&logoColor=orange" /> </a> <a href="https://x.com/shivang_twt" target="_blank"> <img src="https://img.shields.io/badge/X-0d1117?style=for-the-badge&logo=x&logoColor=white" /> </a> </p>
