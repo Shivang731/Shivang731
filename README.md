@@ -3,8 +3,11 @@
 I’m interested in systems that enforce rules —  
 and what happens when those rules are misunderstood.
 
-Most of my learning right now revolves around  
-protocols, transactions, and software that has no room for ambiguity.
+I spend most days learning how protocols, transactions,
+and real software systems behave under pressure.
+
+Some days, you’ll catch me reading manhwa or watching anime.
+Balance matters.
 
 ---
 
@@ -12,8 +15,11 @@ protocols, transactions, and software that has no room for ambiguity.
 
 - Bitcoin protocol & node interaction  
 - Transaction construction, fees, and validation  
-- Systems programming fundamentals (Rust mindset)  
-- Learning by building small, real, breakable systems  
+- Systems-level thinking (learning Rust the hard way)  
+- Backend fundamentals and problem-solving  
+
+I’m learning with one clear goal in mind:  
+to become good enough that **getting hired becomes inevitable**.
 
 ---
 
@@ -25,7 +31,7 @@ I optimize for **understanding**.
 Abstractions are useful —  
 but only after you know what they’re hiding.
 
-This profile is not a highlight reel.  
+This profile isn’t a highlight reel.  
 It’s a trail of work-in-progress.
 
 ---
@@ -48,11 +54,21 @@ It’s a trail of work-in-progress.
 
 ---
 
-### Tools
+### Tools I Actually Use
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=rust,python,js,c,cpp,linux,git,docker&theme=dark" />
+  <img src="https://skillicons.dev/icons?i=java,python,js,rust,linux,git,docker&theme=dark" />
 </p>
+
+---
+
+### Outside Code
+
+- Manhwa when I need perspective  
+- Anime when I need to slow down  
+- Long walks when something doesn’t click  
+
+Not everything productive looks like work.
 
 ---
 
