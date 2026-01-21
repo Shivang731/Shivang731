@@ -1,79 +1,70 @@
-# Shivang Kumar Dubey
+# 👋 Yo, I'm Shivang
 
-I’m interested in systems that enforce rules —  
-and what happens when those rules are misunderstood.
+<div align="center">
+  
+![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=2E9EF7&center=true&vCenter=true&width=435&lines=Building+stuff+that+actually+works;Learning+by+breaking+things;Zero+to+hero+mindset+💪)
 
-I spend most days learning how protocols, transactions,
-and real software systems behave under pressure.
-
-Some days, you’ll catch me reading manhwa or watching anime.
-Balance matters.
+</div>
 
 ---
 
-### Current Focus
+### 🎯 Current Mission
+**Get an internship** → Build cool projects → Prove I'm not just another GitHub account
 
-- Bitcoin protocol & node interaction  
-- Transaction construction, fees, and validation  
-- Systems-level thinking (learning Rust the hard way)  
-- Backend fundamentals and problem-solving  
-
-I’m learning with one clear goal in mind:  
-to become good enough that **getting hired becomes inevitable**.
-
----
-
-### Philosophy
-
-I don’t optimize for speed.  
-I optimize for **understanding**.
-
-Abstractions are useful —  
-but only after you know what they’re hiding.
-
-This profile isn’t a highlight reel.  
-It’s a trail of work-in-progress.
+### 🧠 The Vibe
+- 📚 Learning by doing (and Googling... a lot)
+- 💡 If it compiles, ship it *(jk, sometimes)*
+- 🎮 Inspired by people who rise from nothing and build everything
+- 🔥 Consistency over intensity
 
 ---
 
-### Activity
+### 🛠️ What I Mess Around With
 
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Shivang731&theme=github-compact&hide_border=true" />
-</p>
-
----
-
-### Problem Solving
-
-<p align="center">
-  <a href="https://leetcode.com/u/Shivang_kd/">
-    <img src="https://leetcard.jacoblin.cool/Shivang_kd?theme=dark&font=Fira%20Code&ext=heatmap" />
-  </a>
-</p>
+```javascript
+const shivang = {
+    code: ["JavaScript", "Python", "C++", "Java"],
+    askMeAbout: ["web dev", "algorithms", "that bug I fixed at 3am"],
+    currentlyLearning: "How to not break production",
+    funFact: "I debug with console.log like a true professional"
+};
+```
 
 ---
 
-### Tools I Actually Use
+### 📊 GitHub Stats
 
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=java,python,js,rust,linux,git,docker&theme=dark" />
-</p>
+<div align="center">
+  
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Shivang731&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true)
 
----
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Shivang731&theme=tokyonight&hide_border=true)
 
-### Outside Code
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Shivang731&theme=tokyonight&hide_border=true&layout=compact)
 
-- Manhwa when I need perspective  
-- Anime when I need to slow down  
-- Long walks when something doesn’t click  
-
-Not everything productive looks like work.
+</div>
 
 ---
 
-### Elsewhere
+### 🎮 When I'm Not Coding
 
-- GitHub → https://github.com/Shivang731  
-- LeetCode → https://leetcode.com/u/Shivang_kd/  
-- X → https://x.com/shivang_twt  
+- Watching anime (Deku's grind is real motivation)
+- Thinking about how to optimize my life like it's a sorting algorithm
+- Wondering why my dad's quiet strength > any motivational video
+
+---
+
+### 📫 Let's Connect
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](YOUR_LINKEDIN_URL)
+[![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=Twitter&logoColor=white)](YOUR_TWITTER_URL)
+
+---
+
+<div align="center">
+
+**"From zero to hero, one commit at a time"** 🚀
+
+![Profile Views](https://komarev.com/ghpvc/?username=Shivang731&color=blue&style=flat)
+
+</div>
