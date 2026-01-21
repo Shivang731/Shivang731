@@ -1,63 +1,41 @@
-<h1 align="center">👋 Hi, I'm Shivang Kumar Dubey</h1>
-<h3 align="center"> Learning by Building </h3>
+# Shivang Kumar Dubey
+
+I’m learning how software systems actually work —
+from protocols and networks down to the code that enforces rules.
+
+I build things, break them, and understand why they failed.
+
+## GitHub Activity
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=3500&pause=1000&color=00C2FF&center=true&vCenter=true&width=520&lines=Learning+Software+Development;Exploring+Rust+%7C+%7C+Web+Dev;Building+Projects+Step+by+Step" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Shivang731&theme=tokyo-night&hide_border=true" />
 </p>
 
----
-
-## 👨‍💻 About Me
-
-I'm **Shivang Kumar Dubey**,  learner exploring **Web 3**.  
-Building real-world projects and improving my skills through consistent practice.
-
----
-
-## 🧠 What I'm Learning
-
-- 
-- 
-- 🌐 Web Development  
-- 🧩 Data Structures & Algorithms  
-- 🔧 Git & GitHub  
-
----
-
-## 🛠️ Tech Stack
-
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=html,css,js,python,java,c,cpp,rust,git,github,linux" />
+  <img src="https://github-readme-stats.vercel.app/api?username=Shivang731&show_icons=true&theme=tokyonight&hide_border=true" height="165"/>
+  <img src="https://streak-stats.demolab.com?user=Shivang731&theme=tokyonight&hide_border=true" height="165"/>
 </p>
 
----
-
-## 📊 GitHub Stats
+## Problem Solving (LeetCode)
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Shivang731&show_icons=true&theme=tokyonight" height="165" />
-  <img src="https://streak-stats.demolab.com?user=Shivang731&theme=tokyonight" height="165" />
-</p>
-
-
-
----
-
-## ✨ Random Developer Quote
-
-<p align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark" />
-</p>
-
----
-
-## 🔗 Connect With Me
-
-<p align="center">
-  <a href="https://github.com/Shivang731">
-    <img src="https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github" />
-  </a>
-  <a href="https://x.com/shivang_twt">
-    <img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=twitter" />
+  <a href="https://leetcode.com/u/Shivang_kd/">
+    <img src="https://leetcard.jacoblin.cool/Shivang_kd?theme=dark&font=Fira%20Code&ext=heatmap" />
   </a>
 </p>
+
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=Shivang731&theme=tokyonight&no-frame=true&row=1&column=6" />
+</p>
+
+## Tools & Languages
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=python,js,,java,linux,git,docker" />
+</p>
+
+## Links
+
+- GitHub: https://github.com/Shivang731  
+- LeetCode: https://leetcode.com/u/Shivang_kd/  
+- X: https://x.com/shivang_twt  
