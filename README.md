@@ -1,22 +1,44 @@
 # Shivang Kumar Dubey
 
-I’m learning how software systems actually work —
-from protocols and networks down to the code that enforces rules.
+I’m interested in systems that enforce rules —  
+and what happens when those rules are misunderstood.
 
-I build things, break them, and understand why they failed.
+Most of my learning right now revolves around  
+protocols, transactions, and software that has no room for ambiguity.
 
-## GitHub Activity
+---
+
+### Current Focus
+
+- Bitcoin protocol & node interaction  
+- Transaction construction, fees, and validation  
+- Systems programming fundamentals (Rust mindset)  
+- Learning by building small, real, breakable systems  
+
+---
+
+### Philosophy
+
+I don’t optimize for speed.  
+I optimize for **understanding**.
+
+Abstractions are useful —  
+but only after you know what they’re hiding.
+
+This profile is not a highlight reel.  
+It’s a trail of work-in-progress.
+
+---
+
+### Activity
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Shivang731&theme=tokyo-night&hide_border=true" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Shivang731&theme=github-compact&hide_border=true" />
 </p>
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Shivang731&show_icons=true&theme=tokyonight&hide_border=true" height="165"/>
-  <img src="https://streak-stats.demolab.com?user=Shivang731&theme=tokyonight&hide_border=true" height="165"/>
-</p>
+---
 
-## Problem Solving (LeetCode)
+### Problem Solving
 
 <p align="center">
   <a href="https://leetcode.com/u/Shivang_kd/">
@@ -24,18 +46,18 @@ I build things, break them, and understand why they failed.
   </a>
 </p>
 
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=Shivang731&theme=tokyonight&no-frame=true&row=1&column=6" />
-</p>
+---
 
-## Tools & Languages
+### Tools
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,js,,java,linux,git,docker" />
+  <img src="https://skillicons.dev/icons?i=rust,python,js,c,cpp,linux,git,docker&theme=dark" />
 </p>
 
-## Links
+---
 
-- GitHub: https://github.com/Shivang731  
-- LeetCode: https://leetcode.com/u/Shivang_kd/  
-- X: https://x.com/shivang_twt  
+### Elsewhere
+
+- GitHub → https://github.com/Shivang731  
+- LeetCode → https://leetcode.com/u/Shivang_kd/  
+- X → https://x.com/shivang_twt  
