@@ -1,70 +1,84 @@
-# 👋 Yo, I'm Shivang
-
 <div align="center">
-  
-![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=2E9EF7&center=true&vCenter=true&width=435&lines=Building+stuff+that+actually+works;Learning+by+breaking+things;Zero+to+hero+mindset+💪)
 
-</div>
-
----
-
-### 🎯 Current Mission
-**Get an internship** → Build cool projects → Prove I'm not just another GitHub account
-
-### 🧠 The Vibe
-- 📚 Learning by doing (and Googling... a lot)
-- 💡 If it compiles, ship it *(jk, sometimes)*
-- 🎮 Inspired by people who rise from nothing and build everything
-- 🔥 Consistency over intensity
-
----
-
-### 🛠️ What I Mess Around With
-
-```javascript
-const shivang = {
-    code: ["JavaScript", "Python", "C++", "Java"],
-    askMeAbout: ["web dev", "algorithms", "that bug I fixed at 3am"],
-    currentlyLearning: "How to not break production",
-    funFact: "I debug with console.log like a true professional"
-};
+```ascii
+███████╗██╗  ██╗██╗██╗   ██╗ █████╗ ███╗   ██╗ ██████╗ 
+██╔════╝██║  ██║██║██║   ██║██╔══██╗████╗  ██║██╔════╝ 
+███████╗███████║██║██║   ██║███████║██╔██╗ ██║██║  ███╗
+╚════██║██╔══██║██║╚██╗ ██╔╝██╔══██║██║╚██╗██║██║   ██║
+███████║██║  ██║██║ ╚████╔╝ ██║  ██║██║ ╚████║╚██████╔╝
+╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝  ╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ 
 ```
 
----
-
-### 📊 GitHub Stats
-
-<div align="center">
-  
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Shivang731&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true)
-
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Shivang731&theme=tokyonight&hide_border=true)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Shivang731&theme=tokyonight&hide_border=true&layout=compact)
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&pause=1000&color=00F7FF&center=true&vCenter=true&random=false&width=600&lines=zero+to+hero+speedrun;building+in+public;internship+hunter+%F0%9F%8E%AF" alt="Typing SVG" />
 
 </div>
 
 ---
 
-### 🎮 When I'm Not Coding
+<div align="center">
 
-- Watching anime (Deku's grind is real motivation)
-- Thinking about how to optimize my life like it's a sorting algorithm
-- Wondering why my dad's quiet strength > any motivational video
+## 🎯 THE MISSION
 
----
+**GET AN INTERNSHIP** → ship code → get paid → repeat
 
-### 📫 Let's Connect
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="600">
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](YOUR_LINKEDIN_URL)
-[![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=Twitter&logoColor=white)](YOUR_TWITTER_URL)
+</div>
 
 ---
 
 <div align="center">
 
-**"From zero to hero, one commit at a time"** 🚀
+## 💻 WHAT I'M COOKING WITH
 
-![Profile Views](https://komarev.com/ghpvc/?username=Shivang731&color=blue&style=flat)
+<img src="https://skillicons.dev/icons?i=js,python,cpp,react,nodejs,git,tailwind,mongodb" />
+
+</div>
+
+---
+
+<div align="center">
+
+## 📊 GITHUB 
+
+![](https://github-readme-activity-graph.vercel.app/graph?username=Shivang731&custom_title=Contribution%20Graph&bg_color=0d1117&color=00f7ff&line=00f7ff&point=ffffff&area=true&hide_border=true)
+
+<img src="https://github-readme-stats.vercel.app/api?username=Shivang731&show_icons=true&theme=react&hide_border=true&bg_color=0D1117&title_color=00F7FF&icon_color=00F7FF" height="180" />
+<img src="https://github-readme-streak-stats.herokuapp.com?user=Shivang731&theme=react&hide_border=true&background=0D1117&stroke=00F7FF&ring=00F7FF&fire=00F7FF&currStreakLabel=00F7FF" height="180" />
+
+</div>
+
+---
+
+<div align="center">
+
+## 🧠 LEETCODE HEATMAP
+
+*keeping myself accountable*
+
+[![](https://leetcard.jacoblin.cool/YOUR_LEETCODE_USERNAME?theme=nord&font=Karma&ext=heatmap)](https://leetcode.com/YOUR_LEETCODE_USERNAME/)
+
+</div>
+
+---
+
+<div align="center">
+
+## 🔥 TOP LANGUAGES
+
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=Shivang731&layout=compact&theme=react&hide_border=true&bg_color=0D1117&title_color=00F7FF)
+
+</div>
+
+---
+
+<div align="center">
+
+
+---
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer" width="100%"/>
+
+![](https://komarev.com/ghpvc/?username=Shivang731&color=00f7ff&style=for-the-badge)
 
 </div>
