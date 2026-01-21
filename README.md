@@ -21,31 +21,13 @@ Exploring protocols, backend systems, and how constraints shape software.
 
 ---
 
-## Problem Solving
+## Tech Stack & Tools
 
 <p align="center">
-  <a href="https://leetcode.com/u/Shivang_kd/">
-    <img src="https://leetcard.jacoblin.cool/Shivang_kd?theme=dark&font=Fira%20Code&ext=heatmap" />
-  </a>
+  <img src="https://skillicons.dev/icons?i=java,python,js,rust,linux,git,docker&theme=dark" />
 </p>
 
 ---
-
-##  Tech Stacks
-
-Tech Stack
-<p align="center"> <img src="https://skillicons.dev/icons?i=java,python,js,rust&theme=dark" /> </p>
-
-
----
-
-## Tools & Environment
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=linux,git,docker&theme=dark" />
-</p>
-
-
 
 ## Socials
 
