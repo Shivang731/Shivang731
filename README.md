@@ -1,9 +1,10 @@
-## ** Shivang Kumar Dubey**
+##  Shivang Kumar Dubey
 
+Exploring protocols, backend systems, and how constraints shape software.
 
 ---
 
-## ** Current Focus**
+## Current Focus
 
 - Bitcoin protocol & node interaction  
 - Transaction construction, fees, and validation  
@@ -12,7 +13,7 @@
 
 ---
 
-## ** Activity**
+## Activity
 
 <p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=Shivang731&theme=github-compact&hide_border=true" />
@@ -20,7 +21,7 @@
 
 ---
 
-## ** Problem Solving**
+## Problem Solving
 
 <p align="center">
   <a href="https://leetcode.com/u/Shivang_kd/">
@@ -30,7 +31,7 @@
 
 ---
 
-## ** Tech Stacks**
+##  Tech Stacks
 
 Tech Stack
 <p align="center"> <img src="https://skillicons.dev/icons?i=java,python,js,rust&theme=dark" /> </p>
@@ -38,7 +39,7 @@ Tech Stack
 
 ---
 
-## **Tools & Environment**
+## Tools & Environment
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=linux,git,docker&theme=dark" />
@@ -46,6 +47,6 @@ Tech Stack
 
 
 
-## ** Socials**
+## Socials
 
 <p align="center"> <a href="https://github.com/Shivang731" target="_blank"> <img src="https://img.shields.io/badge/GitHub-0d1117?style=for-the-badge&logo=github&logoColor=white" /> </a> <a href="https://leetcode.com/u/Shivang_kd/" target="_blank"> <img src="https://img.shields.io/badge/LeetCode-0d1117?style=for-the-badge&logo=leetcode&logoColor=orange" /> </a> <a href="https://x.com/shivang_twt" target="_blank"> <img src="https://img.shields.io/badge/X-0d1117?style=for-the-badge&logo=x&logoColor=white" /> </a> </p>
