@@ -12,7 +12,7 @@ Exploring protocols, backend systems, and how constraints shape software.
 
 - Bitcoin protocol & node interaction  
 - Transaction construction, fees, and validation  
-- Systems-level thinking (learning Rust the hard way)  
+- Systems-level thinking  
 - Backend fundamentals and problem-solving  
 
 ---
