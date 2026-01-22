@@ -17,11 +17,11 @@ Exploring protocols, backend systems, and how constraints shape software.
 
 ---
 
-## Stats
+## GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Shivang731&show_icons=true&hide_border=true&theme=github_dark&count_private=true" height="165"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Shivang731&hide_border=true&theme=github-dark-blue" height="165"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=Shivang731&show_icons=true&hide_border=true&theme=github_dark&count_private=true" height="160"/>
+  <img src="https://streak-stats.demolab.com?user=Shivang731&hide_border=true&theme=github-dark" height="160"/>
 </p>
 
 <p align="center">
@@ -41,13 +41,13 @@ Exploring protocols, backend systems, and how constraints shape software.
 ## Socials
 
 <p align="center">
-  <a href="https://github.com/Shivang731" target="_blank">
+  <a href="https://github.com/Shivang731">
     <img src="https://img.shields.io/badge/GitHub-0d1117?style=for-the-badge&logo=github&logoColor=white" />
   </a>
-  <a href="https://leetcode.com/u/Shivang_kd/" target="_blank">
+  <a href="https://leetcode.com/u/Shivang_kd/">
     <img src="https://img.shields.io/badge/LeetCode-0d1117?style=for-the-badge&logo=leetcode&logoColor=orange" />
   </a>
-  <a href="https://x.com/shivang_twt" target="_blank">
+  <a href="https://x.com/shivang_twt">
     <img src="https://img.shields.io/badge/X-0d1117?style=for-the-badge&logo=x&logoColor=white" />
   </a>
 </p>
