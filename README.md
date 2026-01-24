@@ -17,18 +17,13 @@ Exploring protocols, backend systems, and how constraints shape software.
 
 ## GitHub Stats
 
-<div align="center">
-  
-<img src="https://github-readme-stats.vercel.app/api?username=Shivang731&show_icons=true&hide_border=true&theme=github_dark&count_private=true&include_all_commits=true" alt="GitHub Stats" height="180"/>
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Shivang731&show_icons=true&hide_border=true&theme=github_dark&count_private=true&include_all_commits=true" alt="GitHub Stats" height="165"/>
+</p>
 
-
-
-
-
-  
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Shivang731&theme=github-compact&hide_border=true&area=true" alt="Contribution Graph" />
-
-</div>
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Shivang731&theme=github-compact&hide_border=true&area=true" alt="Contribution Graph" />
+</p>
 
 ---
 
