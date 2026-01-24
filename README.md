@@ -17,14 +17,19 @@ Exploring protocols, backend systems, and how constraints shape software.
 
 ## GitHub Stats
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Shivang731&show_icons=true&hide_border=true&theme=github_dark&count_private=true" alt="GitHub Stats" height="160"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Shivang731&hide_border=true&theme=dark&background=0D1117&ring=58A6FF&fire=58A6FF&currStreakLabel=58A6FF" alt="GitHub Streak" height="160"/>
-</p>
+<div align="center">
+  
+  <img src="https://github-readme-stats.vercel.app/api?username=Shivang731&show_icons=true&hide_border=true&theme=github_dark&count_private=true&include_all_commits=true" alt="GitHub Stats" height="170"/>
+  
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Shivang731&layout=compact&hide_border=true&theme=github_dark&langs_count=8" alt="Top Languages" height="170"/>
 
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Shivang731&theme=github-compact&hide_border=true" alt="Contribution Graph" />
-</p>
+</div>
+
+<div align="center">
+  
+  ![](https://github-readme-activity-graph.vercel.app/graph?username=Shivang731&theme=github-compact&hide_border=true)
+  
+</div>
 
 ---
 
@@ -49,3 +54,13 @@ Exploring protocols, backend systems, and how constraints shape software.
     <img src="https://img.shields.io/badge/X-0d1117?style=for-the-badge&logo=x&logoColor=white" alt="X (Twitter)" />
   </a>
 </p>
+
+---
+
+<div align="center">
+  
+  ### 📊 Contribution Streak
+  
+  ![GitHub Streak](https://streak-stats.demolab.com/?user=Shivang731&theme=dark&hide_border=true&background=0D1117&stroke=58A6FF&ring=58A6FF&fire=58A6FF&currStreakNum=58A6FF&sideNums=58A6FF&currStreakLabel=C9D1D9&sideLabels=C9D1D9&dates=8B949E)
+  
+</div>
