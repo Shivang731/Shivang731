@@ -19,7 +19,7 @@ Exploring protocols, backend systems, and how constraints shape software.
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=Shivang731&show_icons=true&hide_border=true&theme=github_dark&count_private=true&include_all_commits=true" alt="GitHub Stats" height="165"/>
-  <img src="https://raw.githubusercontent.com/Shivang731/Shivang731/main/.github/stats/streak.svg" alt="GitHub Streak" height="165"/>
+  <img src="https://streak-stats.demolab.com?user=Shivang731&theme=github-dark&hide_border=true&background=0D1117&ring=58A6FF&fire=58A6FF&currStreakLabel=C9D1D9" alt="GitHub Streak" height="165"/>
 </p>
 
 <p align="center">
