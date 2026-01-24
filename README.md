@@ -21,11 +21,10 @@ Exploring protocols, backend systems, and how constraints shape software.
   
 <img src="https://github-readme-stats.vercel.app/api?username=Shivang731&show_icons=true&hide_border=true&theme=github_dark&count_private=true&include_all_commits=true" alt="GitHub Stats" height="180"/>
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Shivang731&layout=compact&hide_border=true&theme=github_dark&langs_count=8&card_width=320" alt="Top Languages" height="180"/>
 
-</div>
 
-<div align="center">
+
+
   
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=Shivang731&theme=github-compact&hide_border=true&area=true" alt="Contribution Graph" />
 
