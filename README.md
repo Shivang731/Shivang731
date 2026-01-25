@@ -18,12 +18,12 @@ Exploring protocols, backend systems, and how constraints shape software.
 ## GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Shivang731&show_icons=true&hide_border=true&theme=github_dark&count_private=true&include_all_commits=true" alt="GitHub Stats" height="165"/>
-  <img src="https://streak-stats.demolab.com?user=Shivang731&theme=github-dark&hide_border=true&background=0D1117&ring=58A6FF&fire=58A6FF&currStreakLabel=C9D1D9" alt="GitHub Streak" height="165"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=Shivang731&show_icons=true&hide_border=true&theme=github_dark&count_private=true&include_all_commits=true" height="165"/>
+  <img src="https://github-readme-streak-stat-xi.vercel.app?user=Shivang731&theme=github-dark&hide_border=true" height="165"/>
 </p>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Shivang731&theme=github-compact&hide_border=true&area=true" alt="Contribution Graph" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Shivang731&theme=github-compact&hide_border=true&area=true" />
 </p>
 
 ---
@@ -31,7 +31,7 @@ Exploring protocols, backend systems, and how constraints shape software.
 ## Tech Stack & Tools
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=java,python,js,rust,linux,git,docker&theme=dark" alt="Tech Stack" />
+  <img src="https://skillicons.dev/icons?i=java,python,js,rust,linux,git,docker&theme=dark" />
 </p>
 
 ---
@@ -40,12 +40,12 @@ Exploring protocols, backend systems, and how constraints shape software.
 
 <p align="center">
   <a href="https://github.com/Shivang731">
-    <img src="https://img.shields.io/badge/GitHub-0d1117?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+    <img src="https://img.shields.io/badge/GitHub-0d1117?style=for-the-badge&logo=github&logoColor=white" />
   </a>
   <a href="https://leetcode.com/u/Shivang_kd/">
-    <img src="https://img.shields.io/badge/LeetCode-0d1117?style=for-the-badge&logo=leetcode&logoColor=orange" alt="LeetCode" />
+    <img src="https://img.shields.io/badge/LeetCode-0d1117?style=for-the-badge&logo=leetcode&logoColor=orange" />
   </a>
   <a href="https://x.com/shivang_twt">
-    <img src="https://img.shields.io/badge/X-0d1117?style=for-the-badge&logo=x&logoColor=white" alt="X (Twitter)" />
+    <img src="https://img.shields.io/badge/X-0d1117?style=for-the-badge&logo=x&logoColor=white" />
   </a>
 </p>
