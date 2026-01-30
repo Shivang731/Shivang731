@@ -51,4 +51,3 @@ Exploring protocols, backend systems, and how constraints shape software.
 </p>   
 
 
-//gfkngkjgokjkh
