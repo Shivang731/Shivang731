@@ -19,18 +19,24 @@ Exploring protocols, backend systems, and how constraints shape software.
 
 ## 📊 GitHub Stats
 
-<p align="center">
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=Shivang731&show_icons=true&hide_border=true&theme=github_dark&count_private=true&include_all_commits=true&bg_color=0d1117&title_color=ffffff&text_color=c9d1d9&icon_color=58a6ff" height="170" alt="GitHub Stats"/>
-  <img src="https://streak-stats.demolab.com?user=Shivang731&theme=dark&hide_border=true&background=0D1117&ring=58A6FF&fire=58A6FF&currStreakLabel=ffffff&sideLabels=ffffff&dates=c9d1d9" height="170" alt="GitHub Streak"/>
-</p>
+<div align="center">
 
-<p align="center">
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=Shivang731&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=ffffff&text_color=c9d1d9&langs_count=8" width="41%" alt="Top Languages"/>
-</p>
+| ![GitHub Stats](https://github-readme-stats-sigma-five.vercel.app/api?username=Shivang731&show_icons=true&hide_border=true&theme=github_dark&count_private=true&include_all_commits=true&bg_color=0d1117&title_color=ffffff&text_color=c9d1d9&icon_color=58a6ff) | ![GitHub Streak](https://streak-stats.demolab.com?user=Shivang731&theme=dark&hide_border=true&background=0D1117&ring=58A6FF&fire=58A6FF&currStreakLabel=ffffff&sideLabels=ffffff&dates=c9d1d9) |
+| --- | --- |
 
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Shivang731&theme=github-compact&hide_border=true&bg_color=0d1117&color=58a6ff&line=58a6ff&point=ffffff&area=true&area_color=58a6ff" alt="Contribution Graph" />
-</p>
+</div>
+
+<div align="center">
+  
+![Top Languages](https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=Shivang731&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=ffffff&text_color=c9d1d9&langs_count=8)
+
+</div>
+
+<div align="center">
+  
+![Contribution Graph](https://github-readme-activity-graph.vercel.app/graph?username=Shivang731&theme=github-compact&hide_border=true&bg_color=0d1117&color=58a6ff&line=58a6ff&point=ffffff&area=true&area_color=58a6ff)
+
+</div>
 
 ---
 
