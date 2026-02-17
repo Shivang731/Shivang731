@@ -20,14 +20,14 @@ Exploring protocols, backend systems, and how constraints shape software.
 
 <div align="center">
 
-| ![GitHub Stats](https://github-readme-stats-auh9.vercel.app/api?username=Shivang731&show_icons=true&hide_border=true&theme=github_dark&count_private=true&include_all_commits=true&bg_color=0d1117&title_color=ffffff&text_color=c9d1d9&icon_color=58a6ff) | ![GitHub Streak](https://raw.githubusercontent.com/Shivang731/Shivang731/main/assets/streak.svg) |
-| --- | --- |
+![GitHub Streak](https://raw.githubusercontent.com/Shivang731/Shivang731/main/assets/streak.svg)
 
 </div>
 
 <div align="center">
 
-![Top Languages](https://github-readme-stats-auh9.vercel.app/api/top-langs/?username=Shivang731&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=ffffff&text_color=c9d1d9&langs_count=8&exclude_repo=github-readme-activity-graph,github-readme-stats,github-readme-streak-stats,css-exercises,Selenium-Automation-OpenSource,dbgpt-local&hide=php)
+| ![GitHub Stats](https://github-readme-stats-auh9.vercel.app/api?username=Shivang731&show_icons=true&hide_border=true&theme=github_dark&count_private=true&include_all_commits=true&bg_color=0d1117&title_color=ffffff&text_color=c9d1d9&icon_color=58a6ff) | ![Top Languages](https://github-readme-stats-auh9.vercel.app/api/top-langs/?username=Shivang731&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=ffffff&text_color=c9d1d9&langs_count=8&exclude_repo=github-readme-activity-graph,github-readme-stats,github-readme-streak-stats,css-exercises,Selenium-Automation-OpenSource,dbgpt-local&hide=php) |
+| --- | --- |
 
 </div>
 
