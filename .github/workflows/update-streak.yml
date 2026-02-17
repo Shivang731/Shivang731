@@ -10,17 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-
       - name: Create assets folder if missing
         run: mkdir -p assets
-
       - name: Fetch latest streak SVG
         run: curl -s "https://streak-stats.demolab.com?user=Shivang731&theme=dark&hide_border=true&background=0D1117&ring=58A6FF&fire=58A6FF&currStreakLabel=ffffff&sideLabels=ffffff&dates=c9d1d9&cache_seconds=0" -o assets/streak.svg
-
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
