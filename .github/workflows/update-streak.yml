@@ -10,13 +10,143 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-      - name: Create assets folder if missing
-        run: mkdir -p assets
-      - name: Fetch latest streak SVG
-        run: curl -s "https://streak-stats.demolab.com?user=Shivang731&theme=dark&hide_border=true&background=0D1117&ring=58A6FF&fire=58A6FF&currStreakLabel=ffffff&sideLabels=ffffff&dates=c9d1d9&cache_seconds=0" -o assets/streak.svg
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Generate streak SVG
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 << 'EOF'
+          import requests
+          import os
+          from datetime import datetime, timezone, timedelta
+
+          USERNAME = "Shivang731"
+          TOKEN = os.environ["GH_TOKEN"]
+
+          headers = {
+              "Authorization": f"Bearer {TOKEN}",
+              "Content-Type": "application/json"
+          }
+
+          query = """
+          query($username: String!) {
+            user(login: $username) {
+              contributionsCollection {
+                contributionCalendar {
+                  totalContributions
+                  weeks {
+                    contributionDays {
+                      contributionCount
+                      date
+                    }
+                  }
+                }
+              }
+            }
+          }
+          """
+
+          response = requests.post(
+              "https://api.github.com/graphql",
+              json={"query": query, "variables": {"username": USERNAME}},
+              headers=headers
+          )
+
+          data = response.json()
+          weeks = data["data"]["user"]["contributionsCollection"]["contributionCalendar"]["weeks"]
+          total = data["data"]["user"]["contributionsCollection"]["contributionCalendar"]["totalContributions"]
+
+          all_days = []
+          for week in weeks:
+              for day in week["contributionDays"]:
+                  all_days.append(day)
+
+          all_days.sort(key=lambda x: x["date"])
+
+          today = datetime.now(timezone.utc).date()
+
+          current_streak = 0
+          check_date = today
+          if all_days:
+              for day in reversed(all_days):
+                  day_date = datetime.strptime(day["date"], "%Y-%m-%d").date()
+                  if day_date > today:
+                      continue
+                  if day_date == check_date:
+                      if day["contributionCount"] > 0:
+                          current_streak += 1
+                          check_date = day_date - timedelta(days=1)
+                      else:
+                          break
+                  elif day_date == today - timedelta(days=1) and current_streak == 0:
+                      if day["contributionCount"] > 0:
+                          current_streak += 1
+                          check_date = day_date - timedelta(days=1)
+                      else:
+                          break
+                  else:
+                      break
+
+          longest_streak = 0
+          temp_streak = 0
+          prev_date = None
+          for day in all_days:
+              day_date = datetime.strptime(day["date"], "%Y-%m-%d").date()
+              if day["contributionCount"] > 0:
+                  if prev_date and (day_date - prev_date).days == 1:
+                      temp_streak += 1
+                  else:
+                      temp_streak = 1
+                  longest_streak = max(longest_streak, temp_streak)
+                  prev_date = day_date
+              else:
+                  prev_date = None
+
+          first_date = None
+          for day in all_days:
+              if day["contributionCount"] > 0:
+                  first_date = day["date"]
+                  break
+
+          first_str = datetime.strptime(first_date, "%Y-%m-%d").strftime("%b %d, %Y") if first_date else "N/A"
+          today_str = today.strftime("%b %d, %Y")
+
+          svg = f"""<svg width="495" height="195" viewBox="0 0 495 195" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="495" height="195" rx="4.5" fill="#0D1117"/>
+            <rect x="0.5" y="0.5" width="494" height="194" rx="4" stroke="#30363D"/>
+            <text x="82" y="65" text-anchor="middle" fill="#8B949E" font-family="Segoe UI,sans-serif" font-size="12">Total Contributions</text>
+            <text x="82" y="100" text-anchor="middle" fill="#58A6FF" font-family="Segoe UI,sans-serif" font-size="28" font-weight="700">{total}</text>
+            <text x="82" y="125" text-anchor="middle" fill="#8B949E" font-family="Segoe UI,sans-serif" font-size="11">{first_str} - {today_str}</text>
+            <line x1="165" y1="28" x2="165" y2="170" stroke="#30363D" stroke-width="1"/>
+            <text x="247" y="48" text-anchor="middle" font-size="16">🔥</text>
+            <text x="247" y="65" text-anchor="middle" fill="#8B949E" font-family="Segoe UI,sans-serif" font-size="12">Current Streak</text>
+            <text x="247" y="100" text-anchor="middle" fill="#58A6FF" font-family="Segoe UI,sans-serif" font-size="28" font-weight="700">{current_streak}</text>
+            <text x="247" y="118" text-anchor="middle" fill="#8B949E" font-family="Segoe UI,sans-serif" font-size="11">days</text>
+            <text x="247" y="140" text-anchor="middle" fill="#8B949E" font-family="Segoe UI,sans-serif" font-size="11">{today_str}</text>
+            <line x1="330" y1="28" x2="330" y2="170" stroke="#30363D" stroke-width="1"/>
+            <text x="412" y="65" text-anchor="middle" fill="#8B949E" font-family="Segoe UI,sans-serif" font-size="12">Longest Streak</text>
+            <text x="412" y="100" text-anchor="middle" fill="#58A6FF" font-family="Segoe UI,sans-serif" font-size="28" font-weight="700">{longest_streak}</text>
+            <text x="412" y="118" text-anchor="middle" fill="#8B949E" font-family="Segoe UI,sans-serif" font-size="11">days</text>
+          </svg>"""
+
+          with open("assets/streak.svg", "w") as f:
+              f.write(svg)
+
+          print(f"Streak: {current_streak} | Longest: {longest_streak} | Total: {total}")
+          EOF
+
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
