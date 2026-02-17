@@ -15,171 +15,148 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Install dependencies
-        run: pip install requests
+      - name: Create assets folder if missing
+        run: mkdir -p assets
 
       - name: Generate streak SVG
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python3 << 'EOF'
-          import requests
-          import os
-          from datetime import datetime, timezone, timedelta
+          import urllib.request, json, datetime, math
 
-          USERNAME = "Shivang731"
-          TOKEN = os.environ["GH_TOKEN"]
+          username = "Shivang731"
+          token = "${{ secrets.GITHUB_TOKEN }}"
 
-          headers = {
-              "Authorization": f"Bearer {TOKEN}",
-              "Content-Type": "application/json"
-          }
-
-          query = """
-          query($username: String!) {
-            user(login: $username) {
-              contributionsCollection {
+          query = """{
+            user(login: "%s") {
+              contributionsCollection(from: "%s", to: "%s") {
                 contributionCalendar {
                   totalContributions
-                  weeks {
-                    contributionDays {
-                      contributionCount
-                      date
-                    }
-                  }
+                  weeks { contributionDays { date contributionCount } }
                 }
               }
             }
-          }
-          """
-
-          response = requests.post(
-              "https://api.github.com/graphql",
-              json={"query": query, "variables": {"username": USERNAME}},
-              headers=headers
+          }""" % (
+            username,
+            (datetime.date.today() - datetime.timedelta(days=365)).isoformat() + "T00:00:00Z",
+            datetime.date.today().isoformat() + "T23:59:59Z"
           )
 
-          data = response.json()
-          weeks = data["data"]["user"]["contributionsCollection"]["contributionCalendar"]["weeks"]
-          total = data["data"]["user"]["contributionsCollection"]["contributionCalendar"]["totalContributions"]
+          req = urllib.request.Request(
+            "https://api.github.com/graphql",
+            data=json.dumps({"query": query}).encode(),
+            headers={"Authorization": "Bearer " + token, "Content-Type": "application/json"}
+          )
+          with urllib.request.urlopen(req) as resp:
+            data = json.loads(resp.read())
 
-          all_days = []
-          for week in weeks:
-              for day in week["contributionDays"]:
-                  all_days.append(day)
-          all_days.sort(key=lambda x: x["date"])
+          calendar = data["data"]["user"]["contributionsCollection"]["contributionCalendar"]
+          total = calendar["totalContributions"]
 
-          today = datetime.now(timezone.utc).date()
+          days = []
+          for week in calendar["weeks"]:
+            for day in week["contributionDays"]:
+              days.append(day)
+          days.sort(key=lambda d: d["date"])
 
-          # Current streak
+          today = datetime.date.today().isoformat()
+
           current_streak = 0
-          check_date = today
-          for day in reversed(all_days):
-              day_date = datetime.strptime(day["date"], "%Y-%m-%d").date()
-              if day_date > today:
-                  continue
-              if day_date == check_date:
-                  if day["contributionCount"] > 0:
-                      current_streak += 1
-                      check_date = day_date - timedelta(days=1)
-                  else:
-                      break
-              elif day_date == today - timedelta(days=1) and current_streak == 0:
-                  if day["contributionCount"] > 0:
-                      current_streak += 1
-                      check_date = day_date - timedelta(days=1)
-                  else:
-                      break
-              else:
-                  break
+          streak_start = None
+          streak_end = None
+          days_reversed = list(reversed(days))
+          idx = 0
+          if days_reversed and days_reversed[0]["date"] == today and days_reversed[0]["contributionCount"] == 0:
+            idx = 1
+          for day in days_reversed[idx:]:
+            if day["contributionCount"] > 0:
+              current_streak += 1
+              if streak_end is None:
+                streak_end = day["date"]
+              streak_start = day["date"]
+            else:
+              break
 
-          # Longest streak
           longest_streak = 0
-          temp_streak = 0
-          prev_date = None
-          for day in all_days:
-              day_date = datetime.strptime(day["date"], "%Y-%m-%d").date()
-              if day["contributionCount"] > 0:
-                  if prev_date and (day_date - prev_date).days == 1:
-                      temp_streak += 1
-                  else:
-                      temp_streak = 1
-                  longest_streak = max(longest_streak, temp_streak)
-                  prev_date = day_date
-              else:
-                  prev_date = None
+          cur = 0
+          longest_start = None
+          longest_end = None
+          cur_start = None
+          for day in days:
+            if day["contributionCount"] > 0:
+              cur += 1
+              if cur_start is None:
+                cur_start = day["date"]
+              if cur > longest_streak:
+                longest_streak = cur
+                longest_start = cur_start
+                longest_end = day["date"]
+            else:
+              cur = 0
+              cur_start = None
 
-          # First contribution date
-          first_date = None
-          for day in all_days:
-              if day["contributionCount"] > 0:
-                  first_date = day["date"]
-                  break
+          def fmt(d):
+            if not d: return "N/A"
+            return datetime.date.fromisoformat(d).strftime("%b %d, %Y")
 
-          first_str = datetime.strptime(first_date, "%Y-%m-%d").strftime("%b %d, %Y") if first_date else "N/A"
-          today_str = today.strftime("%b %d, %Y")
+          first_day = next((d["date"] for d in days if d["contributionCount"] > 0), None)
+          total_start = fmt(first_day)
+          total_end = fmt(today)
+          streak_range = (fmt(streak_start) + " - " + fmt(streak_end)) if streak_start else "No streak yet"
 
-          # Find streak start date
-          streak_start = today
-          for day in reversed(all_days):
-              day_date = datetime.strptime(day["date"], "%Y-%m-%d").date()
-              if day_date <= today and day["contributionCount"] > 0:
-                  streak_start = day_date
-              elif day_date < today and day["contributionCount"] == 0:
-                  break
-          streak_start_str = streak_start.strftime("%b %d, %Y")
+          ring_color = "#FB8C00" if current_streak > 0 else "#e53935"
+          text_color = ring_color
+          circumference = 2 * math.pi * 40
+          pct = min(current_streak / max(longest_streak, 1), 1.0)
+          offset = circumference * (1 - pct)
 
-          # Circle ring radius & circumference
-          r = 40
-          circ = round(2 * 3.14159 * r, 2)  # ~251.33
+          cx, cy = 247, 105
 
-          svg = f"""<svg width="495" height="195" viewBox="0 0 495 195" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Background -->
-            <rect width="495" height="195" rx="4.5" fill="#0D1117"/>
-            <rect x="0.5" y="0.5" width="494" height="194" rx="4" stroke="#30363D"/>
+          if current_streak == 0:
+            flame = '<g transform="translate(' + str(cx) + ', ' + str(cy) + ') translate(-8, -22)"><path d="M8 18c0 0-0.8 1-0.8 2.5 0 0.8 0.4 1.5 0.4 1.5S6.5 20.5 6.5 19c0 0-1 1.3-1 3 0 1.7 1.3 3 2.5 3s2.5-1.3 2.5-3c0-2.5-2.5-4-2.5-4z" fill="#555"/></g>'
 
-            <!-- LEFT: Total Contributions -->
-            <text x="82" y="50" text-anchor="middle" fill="#8B949E" font-family="Segoe UI,sans-serif" font-size="12">Total Contributions</text>
-            <text x="82" y="90" text-anchor="middle" fill="#58A6FF" font-family="Segoe UI,sans-serif" font-size="32" font-weight="700">{total}</text>
-            <text x="82" y="115" text-anchor="middle" fill="#8B949E" font-family="Segoe UI,sans-serif" font-size="10">{first_str} -</text>
-            <text x="82" y="130" text-anchor="middle" fill="#8B949E" font-family="Segoe UI,sans-serif" font-size="10">{today_str}</text>
+          elif current_streak <= 3:
+            flame = '<g transform="translate(' + str(cx) + ', ' + str(cy) + ') translate(-7, -24) scale(0.7)"><path d="M10 2c0 0-1.2 1.5-1.2 3.5 0 1.2 0.6 2.2 0.6 2.2S7.5 6 7.5 4c0 0-1.5 2-1.5 4.5 0 1.6 0.8 2.8 0.8 2.8S5.5 10 5.5 9c0 0-1.2 1.2-1.2 3.2 0 2.7 2.2 4.8 4.7 4.8s4.7-2.1 4.7-4.8c0-4-3.7-10.2-3.7-10.2z" fill="' + ring_color + '"/></g>'
 
-            <!-- Divider -->
-            <line x1="165" y1="20" x2="165" y2="175" stroke="#30363D" stroke-width="1"/>
+          elif current_streak <= 7:
+            flame = '<defs><filter id="glow-med" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="1.5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><g transform="translate(' + str(cx) + ', ' + str(cy) + ') translate(-8.5, -27) scale(0.85)" filter="url(#glow-med)"><path d="M10 1c0 0-1.5 2-1.5 4.5 0 1.5.8 2.8.8 2.8S7 6 7 4c0 0-2 2.5-2 5.5 0 2 1 3.5 1 3.5S4.5 12 4.5 10.5c0 0-1.5 1.5-1.5 4 0 3.3 2.7 6 6 6s6-2.7 6-6c0-5-5-12-5-12z" fill="' + ring_color + '"/><path d="M10 8c0 0-0.8 1-0.8 2.5 0 1 0.5 1.8 0.5 1.8S8.5 11 8.5 9.5c0 0-1 1.2-1 2.5 0 1.4 1.1 2.5 2.5 2.5s2.5-1.1 2.5-2.5c0-2-2.5-4-2.5-4z" fill="#FFF176" opacity="0.8"/></g>'
 
-            <!-- CENTER: Current Streak with ring -->
-            <text x="247" y="35" text-anchor="middle" fill="#8B949E" font-family="Segoe UI,sans-serif" font-size="12">Current Streak</text>
-            <!-- Outer ring track -->
-            <circle cx="247" cy="100" r="{r}" stroke="#30363D" stroke-width="6" fill="none"/>
-            <!-- Colored ring -->
-            <circle cx="247" cy="100" r="{r}" stroke="#58A6FF" stroke-width="6" fill="none"
-              stroke-dasharray="{circ}" stroke-dashoffset="0"
-              stroke-linecap="round"
-              transform="rotate(-90 247 100)"/>
-            <!-- Fire emoji above number -->
-            <text x="247" y="88" text-anchor="middle" font-size="14">🔥</text>
-            <!-- Streak number -->
-            <text x="247" y="110" text-anchor="middle" fill="#58A6FF" font-family="Segoe UI,sans-serif" font-size="26" font-weight="700">{current_streak}</text>
-            <text x="247" y="165" text-anchor="middle" fill="#8B949E" font-family="Segoe UI,sans-serif" font-size="10">{streak_start_str} - {today_str}</text>
+          elif current_streak <= 14:
+            flame = '<defs><filter id="glow-big" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter><radialGradient id="flame-grad" cx="50%" cy="70%" r="50%"><stop offset="0%" stop-color="#FFF176"/><stop offset="60%" stop-color="' + ring_color + '"/><stop offset="100%" stop-color="#BF360C"/></radialGradient></defs><g transform="translate(' + str(cx) + ', ' + str(cy) + ') translate(-10, -30) scale(1.0)" filter="url(#glow-big)"><path d="M10 0c0 0-1.5 2-1.5 4.5 0 1.5.8 2.8.8 2.8S7 5.5 7 3.5c0 0-2 2.5-2 5.5 0 2 1 3.5 1 3.5S4.5 11.5 4.5 10c0 0-1.5 1.5-1.5 4 0 3.3 2.7 6 6 6s6-2.7 6-6c0-5-5-14-5-14z" fill="url(#flame-grad)"/><path d="M10 7c0 0-0.8 1-0.8 2.5 0 1 0.5 1.8 0.5 1.8S8.5 10 8.5 8.5c0 0-1 1.2-1 2.5 0 1.4 1.1 2.5 2.5 2.5s2.5-1.1 2.5-2.5c0-2-2.5-4-2.5-4z" fill="#FFF9C4" opacity="0.9"/></g>'
 
-            <!-- Divider -->
-            <line x1="330" y1="20" x2="330" y2="175" stroke="#30363D" stroke-width="1"/>
+          else:
+            flame = '<defs><radialGradient id="flame-mega" cx="50%" cy="65%" r="55%"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="25%" stop-color="#FFF176"/><stop offset="60%" stop-color="' + ring_color + '"/><stop offset="100%" stop-color="#B71C1C"/></radialGradient><radialGradient id="glow-ring" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="' + ring_color + '" stop-opacity="0.3"/><stop offset="100%" stop-color="' + ring_color + '" stop-opacity="0"/></radialGradient></defs><circle cx="' + str(cx) + '" cy="' + str(cy-10) + '" r="18" fill="url(#glow-ring)"/><g transform="translate(' + str(cx) + ', ' + str(cy) + ') translate(-12, -36) scale(1.2)"><path d="M10 0c0 0-2 2.5-2 5.5 0 1.5.8 2.8.8 2.8S6 5.5 6 3c0 0-2.5 3-2.5 7 0 2 1 4 1 4S3 12 3 10c0 0-2 2-2 5 0 5 4 9 9 9s9-4 9-9c0-7-9-15-9-15z" fill="url(#flame-mega)"/><path d="M10 8c0 0-1 1.3-1 3 0 1.3 0.7 2.3 0.7 2.3S8.5 12 8.5 10c0 0-1.5 1.5-1.5 3 0 1.9 1.3 3.5 3 3.5s3-1.6 3-3.5c0-3-3-5-3-5z" fill="#FFFFFF" opacity="0.95"/></g>'
 
-            <!-- RIGHT: Longest Streak -->
-            <text x="412" y="50" text-anchor="middle" fill="#8B949E" font-family="Segoe UI,sans-serif" font-size="12">Longest Streak</text>
-            <text x="412" y="90" text-anchor="middle" fill="#58A6FF" font-family="Segoe UI,sans-serif" font-size="32" font-weight="700">{longest_streak}</text>
-            <text x="412" y="115" text-anchor="middle" fill="#8B949E" font-family="Segoe UI,sans-serif" font-size="10">days</text>
-          </svg>"""
+          svg = (
+            '<svg width="495" height="195" viewBox="0 0 495 195" fill="none" xmlns="http://www.w3.org/2000/svg">'
+            '<style>text { font-family: Segoe UI, Ubuntu, sans-serif; }</style>'
+            '<rect width="495" height="195" rx="4.5" fill="#0D1117"/>'
+            '<rect x="0.5" y="0.5" width="494" height="194" rx="4" stroke="#30363D"/>'
+            '<text x="82" y="45" text-anchor="middle" fill="#8B949E" font-size="12">Total Contributions</text>'
+            '<text x="82" y="90" text-anchor="middle" fill="#58A6FF" font-size="36" font-weight="700">' + str(total) + '</text>'
+            '<text x="82" y="115" text-anchor="middle" fill="#8B949E" font-size="10">' + total_start + ' -</text>'
+            '<text x="82" y="130" text-anchor="middle" fill="#8B949E" font-size="10">' + total_end + '</text>'
+            '<line x1="165" y1="20" x2="165" y2="175" stroke="#30363D" stroke-width="1"/>'
+            '<text x="247" y="30" text-anchor="middle" fill="' + text_color + '" font-size="12" font-weight="600">Current Streak</text>'
+            '<circle cx="247" cy="105" r="40" stroke="#30363D" stroke-width="5" fill="none"/>'
+            '<circle cx="247" cy="105" r="40" stroke="' + ring_color + '" stroke-width="5" fill="none"'
+            ' stroke-dasharray="' + str(round(circumference, 2)) + '" stroke-dashoffset="' + str(round(offset, 2)) + '"'
+            ' stroke-linecap="round" transform="rotate(-90 247 105)"/>'
+            + flame +
+            '<text x="247" y="120" text-anchor="middle" fill="' + text_color + '" font-size="28" font-weight="700">' + str(current_streak) + '</text>'
+            '<text x="247" y="165" text-anchor="middle" fill="#8B949E" font-size="9">' + streak_range + '</text>'
+            '<line x1="330" y1="20" x2="330" y2="175" stroke="#30363D" stroke-width="1"/>'
+            '<text x="412" y="45" text-anchor="middle" fill="#8B949E" font-size="12">Longest Streak</text>'
+            '<text x="412" y="90" text-anchor="middle" fill="#58A6FF" font-size="36" font-weight="700">' + str(longest_streak) + '</text>'
+            '<text x="412" y="115" text-anchor="middle" fill="#8B949E" font-size="10">' + fmt(longest_start) + ' -</text>'
+            '<text x="412" y="130" text-anchor="middle" fill="#8B949E" font-size="10">' + fmt(longest_end) + '</text>'
+            '</svg>'
+          )
 
           with open("assets/streak.svg", "w") as f:
-              f.write(svg)
-
-          print(f"Streak: {current_streak} | Longest: {longest_streak} | Total: {total}")
+            f.write(svg)
+          print(f"Done! Total:{total} Current:{current_streak} Longest:{longest_streak}")
           EOF
 
       - name: Commit if changed
