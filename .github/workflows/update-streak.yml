@@ -72,33 +72,33 @@ jobs:
           for week in weeks:
               for day in week["contributionDays"]:
                   all_days.append(day)
-
           all_days.sort(key=lambda x: x["date"])
 
           today = datetime.now(timezone.utc).date()
 
+          # Current streak
           current_streak = 0
           check_date = today
-          if all_days:
-              for day in reversed(all_days):
-                  day_date = datetime.strptime(day["date"], "%Y-%m-%d").date()
-                  if day_date > today:
-                      continue
-                  if day_date == check_date:
-                      if day["contributionCount"] > 0:
-                          current_streak += 1
-                          check_date = day_date - timedelta(days=1)
-                      else:
-                          break
-                  elif day_date == today - timedelta(days=1) and current_streak == 0:
-                      if day["contributionCount"] > 0:
-                          current_streak += 1
-                          check_date = day_date - timedelta(days=1)
-                      else:
-                          break
+          for day in reversed(all_days):
+              day_date = datetime.strptime(day["date"], "%Y-%m-%d").date()
+              if day_date > today:
+                  continue
+              if day_date == check_date:
+                  if day["contributionCount"] > 0:
+                      current_streak += 1
+                      check_date = day_date - timedelta(days=1)
                   else:
                       break
+              elif day_date == today - timedelta(days=1) and current_streak == 0:
+                  if day["contributionCount"] > 0:
+                      current_streak += 1
+                      check_date = day_date - timedelta(days=1)
+                  else:
+                      break
+              else:
+                  break
 
+          # Longest streak
           longest_streak = 0
           temp_streak = 0
           prev_date = None
@@ -114,6 +114,7 @@ jobs:
               else:
                   prev_date = None
 
+          # First contribution date
           first_date = None
           for day in all_days:
               if day["contributionCount"] > 0:
@@ -123,22 +124,56 @@ jobs:
           first_str = datetime.strptime(first_date, "%Y-%m-%d").strftime("%b %d, %Y") if first_date else "N/A"
           today_str = today.strftime("%b %d, %Y")
 
+          # Find streak start date
+          streak_start = today
+          for day in reversed(all_days):
+              day_date = datetime.strptime(day["date"], "%Y-%m-%d").date()
+              if day_date <= today and day["contributionCount"] > 0:
+                  streak_start = day_date
+              elif day_date < today and day["contributionCount"] == 0:
+                  break
+          streak_start_str = streak_start.strftime("%b %d, %Y")
+
+          # Circle ring radius & circumference
+          r = 40
+          circ = round(2 * 3.14159 * r, 2)  # ~251.33
+
           svg = f"""<svg width="495" height="195" viewBox="0 0 495 195" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Background -->
             <rect width="495" height="195" rx="4.5" fill="#0D1117"/>
             <rect x="0.5" y="0.5" width="494" height="194" rx="4" stroke="#30363D"/>
-            <text x="82" y="65" text-anchor="middle" fill="#8B949E" font-family="Segoe UI,sans-serif" font-size="12">Total Contributions</text>
-            <text x="82" y="100" text-anchor="middle" fill="#58A6FF" font-family="Segoe UI,sans-serif" font-size="28" font-weight="700">{total}</text>
-            <text x="82" y="125" text-anchor="middle" fill="#8B949E" font-family="Segoe UI,sans-serif" font-size="11">{first_str} - {today_str}</text>
-            <line x1="165" y1="28" x2="165" y2="170" stroke="#30363D" stroke-width="1"/>
-            <text x="247" y="48" text-anchor="middle" font-size="16">🔥</text>
-            <text x="247" y="65" text-anchor="middle" fill="#8B949E" font-family="Segoe UI,sans-serif" font-size="12">Current Streak</text>
-            <text x="247" y="100" text-anchor="middle" fill="#58A6FF" font-family="Segoe UI,sans-serif" font-size="28" font-weight="700">{current_streak}</text>
-            <text x="247" y="118" text-anchor="middle" fill="#8B949E" font-family="Segoe UI,sans-serif" font-size="11">days</text>
-            <text x="247" y="140" text-anchor="middle" fill="#8B949E" font-family="Segoe UI,sans-serif" font-size="11">{today_str}</text>
-            <line x1="330" y1="28" x2="330" y2="170" stroke="#30363D" stroke-width="1"/>
-            <text x="412" y="65" text-anchor="middle" fill="#8B949E" font-family="Segoe UI,sans-serif" font-size="12">Longest Streak</text>
-            <text x="412" y="100" text-anchor="middle" fill="#58A6FF" font-family="Segoe UI,sans-serif" font-size="28" font-weight="700">{longest_streak}</text>
-            <text x="412" y="118" text-anchor="middle" fill="#8B949E" font-family="Segoe UI,sans-serif" font-size="11">days</text>
+
+            <!-- LEFT: Total Contributions -->
+            <text x="82" y="50" text-anchor="middle" fill="#8B949E" font-family="Segoe UI,sans-serif" font-size="12">Total Contributions</text>
+            <text x="82" y="90" text-anchor="middle" fill="#58A6FF" font-family="Segoe UI,sans-serif" font-size="32" font-weight="700">{total}</text>
+            <text x="82" y="115" text-anchor="middle" fill="#8B949E" font-family="Segoe UI,sans-serif" font-size="10">{first_str} -</text>
+            <text x="82" y="130" text-anchor="middle" fill="#8B949E" font-family="Segoe UI,sans-serif" font-size="10">{today_str}</text>
+
+            <!-- Divider -->
+            <line x1="165" y1="20" x2="165" y2="175" stroke="#30363D" stroke-width="1"/>
+
+            <!-- CENTER: Current Streak with ring -->
+            <text x="247" y="35" text-anchor="middle" fill="#8B949E" font-family="Segoe UI,sans-serif" font-size="12">Current Streak</text>
+            <!-- Outer ring track -->
+            <circle cx="247" cy="100" r="{r}" stroke="#30363D" stroke-width="6" fill="none"/>
+            <!-- Colored ring -->
+            <circle cx="247" cy="100" r="{r}" stroke="#58A6FF" stroke-width="6" fill="none"
+              stroke-dasharray="{circ}" stroke-dashoffset="0"
+              stroke-linecap="round"
+              transform="rotate(-90 247 100)"/>
+            <!-- Fire emoji above number -->
+            <text x="247" y="88" text-anchor="middle" font-size="14">🔥</text>
+            <!-- Streak number -->
+            <text x="247" y="110" text-anchor="middle" fill="#58A6FF" font-family="Segoe UI,sans-serif" font-size="26" font-weight="700">{current_streak}</text>
+            <text x="247" y="165" text-anchor="middle" fill="#8B949E" font-family="Segoe UI,sans-serif" font-size="10">{streak_start_str} - {today_str}</text>
+
+            <!-- Divider -->
+            <line x1="330" y1="20" x2="330" y2="175" stroke="#30363D" stroke-width="1"/>
+
+            <!-- RIGHT: Longest Streak -->
+            <text x="412" y="50" text-anchor="middle" fill="#8B949E" font-family="Segoe UI,sans-serif" font-size="12">Longest Streak</text>
+            <text x="412" y="90" text-anchor="middle" fill="#58A6FF" font-family="Segoe UI,sans-serif" font-size="32" font-weight="700">{longest_streak}</text>
+            <text x="412" y="115" text-anchor="middle" fill="#8B949E" font-family="Segoe UI,sans-serif" font-size="10">days</text>
           </svg>"""
 
           with open("assets/streak.svg", "w") as f:
