@@ -8,7 +8,6 @@ Exploring protocols, backend systems, and how constraints shape software.
 ---
 
 ## ⚛️ Current Focus
-
 - **React.js** - Building modern, interactive UIs  
 - Component architecture & state management  
 - Hooks, context API, and performance optimization  
@@ -19,9 +18,7 @@ Exploring protocols, backend systems, and how constraints shape software.
 ## 📊 GitHub Stats
 
 <div align="center">
-
-![GitHub Streak](https://raw.githubusercontent.com/Shivang731/Shivang731/main/assets/streak.svg)
-
+  <a href="https://git.io/streak-stats"><img src="https://streak-stats.demolab.com?user=Shivang731&theme=transparent&hide_border=true&background=0d1117&ring=58a6ff&fire=58a6ff&currStreakNum=ffffff&sideNums=ffffff&currStreakLabel=58a6ff&sideLabels=8b949e&dates=8b949e" alt="GitHub Streak" /></a>
 </div>
 
 <div align="center">
