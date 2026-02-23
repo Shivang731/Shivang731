@@ -8,7 +8,6 @@ Exploring protocols, backend systems, and how constraints shape software.
 ---
 
 ## ⚛️ Current Focus
-
 - **React.js** - Building modern, interactive UIs  
 - Component architecture & state management  
 - Hooks, context API, and performance optimization  
@@ -19,12 +18,14 @@ Exploring protocols, backend systems, and how constraints shape software.
 ## 📊 GitHub Stats
 
 <div align="center">
-  <a href="https://git.io/streak-stats"><img src="https://streak-stats.demolab.com?user=Shivang731&theme=transparent&hide_border=true&background=0d1117&ring=58a6ff&fire=58a6ff&currStreakNum=ffffff&sideNums=ffffff&currStreakLabel=58a6ff&sideLabels=8b949e&dates=8b949e" alt="GitHub Streak" /></a>
+  <a href="https://git.io/streak-stats">
+    <img src="https://streak-stats.demolab.com?user=Shivang731&theme=transparent&hide_border=true&background=0d1117&ring=58a6ff&fire=58a6ff&currStreakNum=ffffff&sideNums=ffffff&currStreakLabel=58a6ff&sideLabels=8b949e&dates=8b949e" alt="GitHub Streak" />
+  </a>
 </div>
 
 <div align="center">
 
-| ![GitHub Stats](https://github-readme-stats-auh9.vercel.app/api?username=Shivang731&show_icons=true&hide_border=true&theme=github_dark&count_private=true&include_all_commits=true&bg_color=0d1117&title_color=ffffff&text_color=c9d1d9&icon_color=58a6ff) | ![Top Languages](https://github-readme-stats-auh9.vercel.app/api/top-langs/?username=Shivang731&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=ffffff&text_color=c9d1d9&langs_count=8&exclude_repo=github-readme-activity-graph,github-readme-stats,github-readme-streak-stats,css-exercises,Selenium-Automation-OpenSource,dbgpt-local&hide=php) |
+| ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Shivang731&show_icons=true&hide_border=true&theme=github_dark&count_private=true&include_all_commits=true&bg_color=0d1117&title_color=ffffff&text_color=c9d1d9&icon_color=58a6ff&show=reviews,prs_merged,prs_merged_percentage) | ![Top Languages](https://github-readme-stats-auh9.vercel.app/api/top-langs/?username=Shivang731&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=ffffff&text_color=c9d1d9&langs_count=8&exclude_repo=github-readme-activity-graph,github-readme-stats,github-readme-streak-stats,css-exercises,Selenium-Automation-OpenSource,dbgpt-local&hide=php) |
 | --- | --- |
 
 </div>
