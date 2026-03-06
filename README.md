@@ -5,13 +5,6 @@ Exploring protocols, backend systems, and how constraints shape software.
   <img src="https://komarev.com/ghpvc/?username=Shivang731&label=Profile%20views&color=0d1117&style=flat" alt="Profile views" />
 </p>
 
----
-
-## ⚛️ Current Focus
-- **React.js** - Building modern, interactive UIs  
-- Component architecture & state management  
-- Hooks, context API, and performance optimization  
-- Frontend best practices and design patterns  
 
 ---
 
