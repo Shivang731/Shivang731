@@ -1,0 +1,22 @@
+name: generate-activity-graph
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Ashutosh00710/github-readme-activity-graph@v2.1.1
+        with:
+          github_username: Shivang731
+          theme: github-compact
+          hide_border: true
+          bg_color: 0d1117
+          color: ffffff
+          line: ffffff
+          point: ffffff
+          area: true
+          area_color: ffffff
+          output: github-contribution-grid-snake.svg
