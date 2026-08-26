@@ -8,7 +8,7 @@ jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
-      - uses: Ashutosh00710/github-readme-activity-graph@v2.1.1
+      - uses: Ashutosh00710/github-readme-activity-graph@master
         with:
           github_username: Shivang731
           theme: github-compact
