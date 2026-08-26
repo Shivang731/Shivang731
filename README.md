@@ -8,12 +8,20 @@
 
 ## 📊 GitHub Stats
 <div align="center">
+<table>
+<tr>
+<td>
 <a href="https://github.com/Shivang731">
   <img height="180" src="https://github-stats-extended.vercel.app/api?username=Shivang731&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=ffffff&text_color=c9d1d9&icon_color=58a6ff&cache_seconds=86400" alt="GitHub Stats" />
 </a>
+</td>
+<td>
 <a href="https://github.com/Shivang731">
   <img height="180" src="https://streak-stats.demolab.com/?user=Shivang731&theme=github-dark-blue&hide_border=true&cache=86400" alt="GitHub Streak" />
 </a>
+</td>
+</tr>
+</table>
 </div>
 
 ---
@@ -37,6 +45,3 @@
     <img src="https://img.shields.io/badge/X-0d1117?style=for-the-badge&logo=x&logoColor=white" alt="X" />
   </a>
 </p>
-
----
-
