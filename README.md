@@ -17,7 +17,7 @@
 </td>
 <td>
 <a href="https://github.com/Shivang731">
-  <img height="180" src="https://streak-stats.demolab.com/?user=Shivang731&theme=github-dark-blue&hide_border=true&cache=86400" alt="GitHub Streak" />
+  <img height="180" src="https://nirzak-streak-stats.koyeb.app/?user=Shivang731&theme=github-dark-blue&hide_border=true&cache=86400" alt="GitHub Streak" />
 </a>
 </td>
 </tr>
